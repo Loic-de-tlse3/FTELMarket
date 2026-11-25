@@ -18,6 +18,5 @@ public class ProductRequest
     [Range(0, int.MaxValue)]
     public int Stock { get; set; }
 
-    [Range(1, int.MaxValue)]
-    public int CategoryId { get; set; }
+    public Guid CategoryId { get; set; }
 }

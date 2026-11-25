@@ -1,0 +1,13 @@
+2026-11-13 16:35:01.588 +01:00 [WRN] Failed to determine the https port for redirect.
+2026-11-13 16:35:01.767 +01:00 [INF] Début de la synchronisation des clients.
+2026-11-13 16:35:01.777 +01:00 [INF] Start processing HTTP request GET http://localhost:8080/api/customers?*
+2026-11-13 16:35:01.814 +01:00 [INF] Sending HTTP request GET http://localhost:8080/api/customers?*
+2026-11-13 16:35:01.852 +01:00 [INF] Received HTTP response headers after 35.4035ms - 504
+2026-11-13 16:35:01.864 +01:00 [WRN] Execution attempt. Source: 'FlakyService-standard//Standard-Retry', Operation Key: 'null', Result: '504', Handled: 'true', Attempt: '0', Execution Time: 52.448ms
+2026-11-13 16:35:01.870 +01:00 [WRN] Resilience event occurred. EventName: 'OnRetry', Source: 'FlakyService-standard//Standard-Retry', Operation Key: 'null', Result: '504'
+2026-11-13 16:35:03.224 +01:00 [INF] Sending HTTP request GET http://localhost:8080/api/customers?*
+2026-11-13 16:35:03.230 +01:00 [INF] Received HTTP response headers after 5.1274ms - 200
+2026-11-13 16:35:03.231 +01:00 [INF] Execution attempt. Source: 'FlakyService-standard//Standard-Retry', Operation Key: 'null', Result: '200', Handled: 'false', Attempt: '1', Execution Time: 9.4058ms
+2026-11-13 16:35:03.247 +01:00 [INF] End processing HTTP request after 1473.9843ms - 200
+2026-11-13 16:35:03.275 +01:00 [INF] 500 Clients récupérés depuis l'API tierce.
+2026-11-13 16:35:04.212 +01:00 [INF] Synchronisation terminée : 0 Créé(s), 500 mis à jour et 0 supprimé(s).

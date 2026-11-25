@@ -10,8 +10,8 @@ public class ProductsController(FTELMarketDbContext db) : ControllerBase
 {
 
     public record ProductResponse(
-        int Id, string Name, string? Description, decimal Price,
-        int Stock, int CategoryId, DateTime CreatedAt, string CategoryName
+        Guid Id, string Name, string? Description, decimal Price,
+        int Stock, Guid CategoryId, DateTime CreatedAt, string CategoryName
     );
 
     [HttpGet(Name ="GetProducts")]
@@ -63,7 +63,7 @@ public class ProductsController(FTELMarketDbContext db) : ControllerBase
     }
 
     [HttpPut("{id}", Name = "PutProducts")]
-    public async Task<ActionResult<ProductResponse>> Put(ProductRequest request, int id)
+    public async Task<ActionResult<ProductResponse>> Put(ProductRequest request, Guid id)
     {
         var product = await db.Products.FirstOrDefaultAsync(p => p.Id == id);
 
@@ -98,7 +98,7 @@ public class ProductsController(FTELMarketDbContext db) : ControllerBase
     }
 
     [HttpDelete("{id}", Name = "DeleteProducts")]
-    public async Task<IActionResult> Delete(int id)
+    public async Task<IActionResult> Delete(Guid id)
     {
         var product = await db.Products.FirstOrDefaultAsync(p => p.Id == id);
 

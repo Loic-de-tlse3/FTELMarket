@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("FTELMarket")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d4646bd2bf433be7522f25354b7b73b6d384e084")]
 [assembly: System.Reflection.AssemblyProductAttribute("FTELMarket")]
 [assembly: System.Reflection.AssemblyTitleAttribute("FTELMarket")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

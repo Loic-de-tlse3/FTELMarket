@@ -24,11 +24,9 @@ namespace FTELMarket.Migrations
 
             modelBuilder.Entity("FTELMarket.Category", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("integer");
-
-                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
+                        .HasColumnType("uuid");
 
                     b.Property<string>("Name")
                         .IsRequired()
@@ -48,36 +46,125 @@ namespace FTELMarket.Migrations
                     b.HasData(
                         new
                         {
-                            Id = 1,
+                            Id = new Guid("11111111-1111-1111-1111-111111111111"),
                             Name = "PlayStation 5"
                         },
                         new
                         {
-                            Id = 2,
+                            Id = new Guid("22222222-2222-2222-2222-222222222222"),
                             Name = "Nintendo Switch"
                         },
                         new
                         {
-                            Id = 3,
+                            Id = new Guid("33333333-3333-3333-3333-333333333333"),
                             Name = "Xbox Series X"
                         },
                         new
                         {
-                            Id = 4,
+                            Id = new Guid("44444444-4444-4444-4444-444444444444"),
                             Name = "PC"
                         });
                 });
 
+            modelBuilder.Entity("FTELMarket.Client", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uuid");
+
+                    b.Property<string>("City")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("Email")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("FirstName")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("LastName")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("Id")
+                        .IsUnique();
+
+                    b.ToTable("Clients");
+                });
+
+            modelBuilder.Entity("FTELMarket.OrderLine", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uuid");
+
+                    b.Property<Guid>("OrderId")
+                        .HasColumnType("uuid");
+
+                    b.Property<Guid>("ProductId")
+                        .HasColumnType("uuid");
+
+                    b.Property<string>("ProductReference")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<int>("Quantity")
+                        .HasColumnType("integer");
+
+                    b.Property<decimal>("UnitPrice")
+                        .HasColumnType("numeric");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("OrderId");
+
+                    b.HasIndex("ProductId");
+
+                    b.ToTable("OrderLines");
+                });
+
+            modelBuilder.Entity("FTELMarket.OrderRequest", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uuid");
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.Property<Guid>("CustomerId")
+                        .HasColumnType("uuid");
+
+                    b.Property<string>("OrderNumber")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("Status")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("CustomerId");
+
+                    b.HasIndex("Id")
+                        .IsUnique();
+
+                    b.ToTable("Orders");
+                });
+
             modelBuilder.Entity("FTELMarket.Product", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("integer");
+                        .HasColumnType("uuid");
 
-                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
-
-                    b.Property<int>("CategoryId")
-                        .HasColumnType("integer");
+                    b.Property<Guid>("CategoryId")
+                        .HasColumnType("uuid");
 
                     b.Property<DateTime>("CreatedAt")
                         .HasColumnType("timestamp with time zone");
@@ -85,6 +172,9 @@ namespace FTELMarket.Migrations
                     b.Property<string>("Description")
                         .HasMaxLength(1000)
                         .HasColumnType("character varying(1000)");
+
+                    b.Property<Guid?>("ExternalId")
+                        .HasColumnType("uuid");
 
                     b.Property<string>("Name")
                         .IsRequired()
@@ -94,6 +184,9 @@ namespace FTELMarket.Migrations
                     b.Property<decimal>("Price")
                         .HasPrecision(18, 2)
                         .HasColumnType("numeric(18,2)");
+
+                    b.Property<string>("Reference")
+                        .HasColumnType("text");
 
                     b.Property<int>("Stock")
                         .HasColumnType("integer");
@@ -112,6 +205,36 @@ namespace FTELMarket.Migrations
                         });
                 });
 
+            modelBuilder.Entity("FTELMarket.OrderLine", b =>
+                {
+                    b.HasOne("FTELMarket.OrderRequest", "Order")
+                        .WithMany("Lines")
+                        .HasForeignKey("OrderId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.HasOne("FTELMarket.Product", "Product")
+                        .WithMany()
+                        .HasForeignKey("ProductId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Order");
+
+                    b.Navigation("Product");
+                });
+
+            modelBuilder.Entity("FTELMarket.OrderRequest", b =>
+                {
+                    b.HasOne("FTELMarket.Client", "Client")
+                        .WithMany()
+                        .HasForeignKey("CustomerId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.Navigation("Client");
+                });
+
             modelBuilder.Entity("FTELMarket.Product", b =>
                 {
                     b.HasOne("FTELMarket.Category", "Category")
@@ -126,6 +249,11 @@ namespace FTELMarket.Migrations
             modelBuilder.Entity("FTELMarket.Category", b =>
                 {
                     b.Navigation("Products");
+                });
+
+            modelBuilder.Entity("FTELMarket.OrderRequest", b =>
+                {
+                    b.Navigation("Lines");
                 });
 #pragma warning restore 612, 618
         }

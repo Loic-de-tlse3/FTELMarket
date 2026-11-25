@@ -30,7 +30,7 @@ public class ProductConfiguration : IEntityTypeConfiguration<Product>
 
         builder.HasOne(product => product.Category)
             .WithMany(category => category.Products)
-            .HasForeignKey(Product => Product.CategoryId)
+            .HasForeignKey(product => product.CategoryId)
             .OnDelete(DeleteBehavior.Restrict);
 
         builder.ToTable(t =>

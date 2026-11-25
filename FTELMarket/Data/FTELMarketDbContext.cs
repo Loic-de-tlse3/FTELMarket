@@ -10,6 +10,12 @@ public class FTELMarketDbContext : DbContext
 
     public DbSet<Category> Categories { get; set; }
 
+    public DbSet<Client> Clients { get; set; }
+
+    public DbSet<OrderRequest> Orders { get; set; }
+
+    public DbSet<OrderLine> OrderLines { get; set; }
+
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         modelBuilder.ApplyConfigurationsFromAssembly(typeof(FTELMarketDbContext).Assembly);

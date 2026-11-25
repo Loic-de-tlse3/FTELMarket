@@ -1,0 +1,621 @@
+2026-11-14 18:40:33.725 +01:00 [WRN] Failed to determine the https port for redirect.
+2026-11-14 18:46:01.569 +01:00 [WRN] Failed to determine the https port for redirect.
+2026-11-14 18:46:44.447 +01:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Unable to resolve service for type 'FTELMarket.ProductSyncService' while attempting to activate 'SyncController'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.ThrowHelperUnableToResolveService(Type type, Type requiredBy)
+   at lambda_method9(Closure, IServiceProvider, Object[])
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass6_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2026-11-14 19:01:58.288 +01:00 [WRN] Failed to determine the https port for redirect.
+2026-11-14 19:01:58.491 +01:00 [INF] Début de la synchronisation des produits.
+2026-11-14 19:01:58.498 +01:00 [INF] Start processing HTTP request GET http://localhost:8080/api/products?*
+2026-11-14 19:01:58.526 +01:00 [INF] Sending HTTP request GET http://localhost:8080/api/products?*
+2026-11-14 19:01:58.560 +01:00 [INF] Received HTTP response headers after 32.0193ms - 200
+2026-11-14 19:01:58.571 +01:00 [INF] Execution attempt. Source: 'FlakyService-standard//Standard-Retry', Operation Key: 'null', Result: '200', Handled: 'false', Attempt: '0', Execution Time: 47.3518ms
+2026-11-14 19:01:58.576 +01:00 [INF] End processing HTTP request after 81.0098ms - 200
+2026-11-14 19:01:58.604 +01:00 [INF] Start processing HTTP request GET http://localhost:8080/api/products?*
+2026-11-14 19:01:58.604 +01:00 [INF] Sending HTTP request GET http://localhost:8080/api/products?*
+2026-11-14 19:01:58.607 +01:00 [INF] Received HTTP response headers after 2.8243ms - 200
+2026-11-14 19:01:58.607 +01:00 [INF] Execution attempt. Source: 'FlakyService-standard//Standard-Retry', Operation Key: 'null', Result: '200', Handled: 'false', Attempt: '0', Execution Time: 3.1229ms
+2026-11-14 19:01:58.607 +01:00 [INF] End processing HTTP request after 3.8332ms - 200
+2026-11-14 19:01:58.608 +01:00 [INF] Start processing HTTP request GET http://localhost:8080/api/products?*
+2026-11-14 19:01:58.608 +01:00 [INF] Sending HTTP request GET http://localhost:8080/api/products?*
+2026-11-14 19:01:58.613 +01:00 [INF] Received HTTP response headers after 4.6124ms - 500
+2026-11-14 19:01:58.614 +01:00 [WRN] Execution attempt. Source: 'FlakyService-standard//Standard-Retry', Operation Key: 'null', Result: '500', Handled: 'true', Attempt: '0', Execution Time: 5.915ms
+2026-11-14 19:01:58.620 +01:00 [WRN] Resilience event occurred. EventName: 'OnRetry', Source: 'FlakyService-standard//Standard-Retry', Operation Key: 'null', Result: '500'
+2026-11-14 19:02:01.183 +01:00 [INF] Sending HTTP request GET http://localhost:8080/api/products?*
+2026-11-14 19:02:01.184 +01:00 [INF] Received HTTP response headers after 0.9699ms - 200
+2026-11-14 19:02:01.184 +01:00 [INF] Execution attempt. Source: 'FlakyService-standard//Standard-Retry', Operation Key: 'null', Result: '200', Handled: 'false', Attempt: '1', Execution Time: 1.4891ms
+2026-11-14 19:02:01.184 +01:00 [INF] End processing HTTP request after 2576.3117ms - 200
+2026-11-14 19:02:01.185 +01:00 [INF] Start processing HTTP request GET http://localhost:8080/api/products?*
+2026-11-14 19:02:01.185 +01:00 [INF] Sending HTTP request GET http://localhost:8080/api/products?*
+2026-11-14 19:02:01.186 +01:00 [INF] Received HTTP response headers after 0.7313ms - 502
+2026-11-14 19:02:01.186 +01:00 [WRN] Execution attempt. Source: 'FlakyService-standard//Standard-Retry', Operation Key: 'null', Result: '502', Handled: 'true', Attempt: '0', Execution Time: 0.9558ms
+2026-11-14 19:02:01.186 +01:00 [WRN] Resilience event occurred. EventName: 'OnRetry', Source: 'FlakyService-standard//Standard-Retry', Operation Key: 'null', Result: '502'
+2026-11-14 19:02:02.987 +01:00 [INF] Sending HTTP request GET http://localhost:8080/api/products?*
+2026-11-14 19:02:02.988 +01:00 [INF] Received HTTP response headers after 0.9486ms - 200
+2026-11-14 19:02:02.988 +01:00 [INF] Execution attempt. Source: 'FlakyService-standard//Standard-Retry', Operation Key: 'null', Result: '200', Handled: 'false', Attempt: '1', Execution Time: 1.4678ms
+2026-11-14 19:02:02.988 +01:00 [INF] End processing HTTP request after 1803.4428ms - 200
+2026-11-14 19:02:02.989 +01:00 [INF] Start processing HTTP request GET http://localhost:8080/api/products?*
+2026-11-14 19:02:02.989 +01:00 [INF] Sending HTTP request GET http://localhost:8080/api/products?*
+2026-11-14 19:02:02.990 +01:00 [INF] Received HTTP response headers after 0.5586ms - 200
+2026-11-14 19:02:02.990 +01:00 [INF] Execution attempt. Source: 'FlakyService-standard//Standard-Retry', Operation Key: 'null', Result: '200', Handled: 'false', Attempt: '0', Execution Time: 0.7431ms
+2026-11-14 19:02:02.990 +01:00 [INF] End processing HTTP request after 0.9491ms - 200
+2026-11-14 19:02:02.990 +01:00 [INF] Start processing HTTP request GET http://localhost:8080/api/products?*
+2026-11-14 19:02:02.990 +01:00 [INF] Sending HTTP request GET http://localhost:8080/api/products?*
+2026-11-14 19:02:02.991 +01:00 [INF] Received HTTP response headers after 0.4362ms - 200
+2026-11-14 19:02:02.991 +01:00 [INF] Execution attempt. Source: 'FlakyService-standard//Standard-Retry', Operation Key: 'null', Result: '200', Handled: 'false', Attempt: '0', Execution Time: 0.6011ms
+2026-11-14 19:02:02.991 +01:00 [INF] End processing HTTP request after 0.7745ms - 200
+2026-11-14 19:02:02.991 +01:00 [INF] Start processing HTTP request GET http://localhost:8080/api/products?*
+2026-11-14 19:02:02.991 +01:00 [INF] Sending HTTP request GET http://localhost:8080/api/products?*
+2026-11-14 19:02:02.992 +01:00 [INF] Received HTTP response headers after 0.6306ms - 200
+2026-11-14 19:02:02.992 +01:00 [INF] Execution attempt. Source: 'FlakyService-standard//Standard-Retry', Operation Key: 'null', Result: '200', Handled: 'false', Attempt: '0', Execution Time: 0.7908ms
+2026-11-14 19:02:02.992 +01:00 [INF] End processing HTTP request after 0.9557ms - 200
+2026-11-14 19:02:02.992 +01:00 [INF] Start processing HTTP request GET http://localhost:8080/api/products?*
+2026-11-14 19:02:02.992 +01:00 [INF] Sending HTTP request GET http://localhost:8080/api/products?*
+2026-11-14 19:02:02.993 +01:00 [INF] Received HTTP response headers after 0.4914ms - 200
+2026-11-14 19:02:02.993 +01:00 [INF] Execution attempt. Source: 'FlakyService-standard//Standard-Retry', Operation Key: 'null', Result: '200', Handled: 'false', Attempt: '0', Execution Time: 0.7036ms
+2026-11-14 19:02:02.994 +01:00 [INF] End processing HTTP request after 1.6501ms - 200
+2026-11-14 19:02:02.999 +01:00 [INF] Start processing HTTP request GET http://localhost:8080/api/products?*
+2026-11-14 19:02:02.999 +01:00 [INF] Sending HTTP request GET http://localhost:8080/api/products?*
+2026-11-14 19:02:03.000 +01:00 [INF] Received HTTP response headers after 0.5069ms - 503
+2026-11-14 19:02:03.000 +01:00 [WRN] Execution attempt. Source: 'FlakyService-standard//Standard-Retry', Operation Key: 'null', Result: '503', Handled: 'true', Attempt: '0', Execution Time: 0.7274ms
+2026-11-14 19:02:03.000 +01:00 [WRN] Resilience event occurred. EventName: 'OnRetry', Source: 'FlakyService-standard//Standard-Retry', Operation Key: 'null', Result: '503'
+2026-11-14 19:02:03.879 +01:00 [INF] Sending HTTP request GET http://localhost:8080/api/products?*
+2026-11-14 19:02:03.880 +01:00 [INF] Received HTTP response headers after 0.8746ms - 200
+2026-11-14 19:02:03.880 +01:00 [INF] Execution attempt. Source: 'FlakyService-standard//Standard-Retry', Operation Key: 'null', Result: '200', Handled: 'false', Attempt: '1', Execution Time: 1.5123ms
+2026-11-14 19:02:03.880 +01:00 [INF] End processing HTTP request after 881.0606ms - 200
+2026-11-14 19:02:03.880 +01:00 [INF] Start processing HTTP request GET http://localhost:8080/api/products?*
+2026-11-14 19:02:03.880 +01:00 [INF] Sending HTTP request GET http://localhost:8080/api/products?*
+2026-11-14 19:02:03.881 +01:00 [INF] Received HTTP response headers after 0.5005ms - 200
+2026-11-14 19:02:03.881 +01:00 [INF] Execution attempt. Source: 'FlakyService-standard//Standard-Retry', Operation Key: 'null', Result: '200', Handled: 'false', Attempt: '0', Execution Time: 0.6345ms
+2026-11-14 19:02:03.881 +01:00 [INF] End processing HTTP request after 0.7881ms - 200
+2026-11-14 19:02:03.881 +01:00 [INF] Start processing HTTP request GET http://localhost:8080/api/products?*
+2026-11-14 19:02:03.881 +01:00 [INF] Sending HTTP request GET http://localhost:8080/api/products?*
+2026-11-14 19:02:03.882 +01:00 [INF] Received HTTP response headers after 0.2805ms - 200
+2026-11-14 19:02:03.882 +01:00 [INF] Execution attempt. Source: 'FlakyService-standard//Standard-Retry', Operation Key: 'null', Result: '200', Handled: 'false', Attempt: '0', Execution Time: 0.379ms
+2026-11-14 19:02:03.882 +01:00 [INF] End processing HTTP request after 0.5434ms - 200
+2026-11-14 19:02:03.882 +01:00 [INF] Start processing HTTP request GET http://localhost:8080/api/products?*
+2026-11-14 19:02:03.882 +01:00 [INF] Sending HTTP request GET http://localhost:8080/api/products?*
+2026-11-14 19:02:03.882 +01:00 [INF] Received HTTP response headers after 0.2235ms - 200
+2026-11-14 19:02:03.882 +01:00 [INF] Execution attempt. Source: 'FlakyService-standard//Standard-Retry', Operation Key: 'null', Result: '200', Handled: 'false', Attempt: '0', Execution Time: 0.3229ms
+2026-11-14 19:02:03.882 +01:00 [INF] End processing HTTP request after 0.4777ms - 200
+2026-11-14 19:02:03.883 +01:00 [INF] Start processing HTTP request GET http://localhost:8080/api/products?*
+2026-11-14 19:02:03.883 +01:00 [INF] Sending HTTP request GET http://localhost:8080/api/products?*
+2026-11-14 19:02:03.883 +01:00 [INF] Received HTTP response headers after 0.2401ms - 200
+2026-11-14 19:02:03.883 +01:00 [INF] Execution attempt. Source: 'FlakyService-standard//Standard-Retry', Operation Key: 'null', Result: '200', Handled: 'false', Attempt: '0', Execution Time: 0.3488ms
+2026-11-14 19:02:03.883 +01:00 [INF] End processing HTTP request after 0.4796ms - 200
+2026-11-14 19:02:03.883 +01:00 [INF] Start processing HTTP request GET http://localhost:8080/api/products?*
+2026-11-14 19:02:03.883 +01:00 [INF] Sending HTTP request GET http://localhost:8080/api/products?*
+2026-11-14 19:02:03.884 +01:00 [INF] Received HTTP response headers after 0.2234ms - 200
+2026-11-14 19:02:03.884 +01:00 [INF] Execution attempt. Source: 'FlakyService-standard//Standard-Retry', Operation Key: 'null', Result: '200', Handled: 'false', Attempt: '0', Execution Time: 0.3166ms
+2026-11-14 19:02:03.884 +01:00 [INF] End processing HTTP request after 0.4333ms - 200
+2026-11-14 19:02:03.884 +01:00 [INF] Start processing HTTP request GET http://localhost:8080/api/products?*
+2026-11-14 19:02:03.884 +01:00 [INF] Sending HTTP request GET http://localhost:8080/api/products?*
+2026-11-14 19:02:03.884 +01:00 [INF] Received HTTP response headers after 0.2147ms - 200
+2026-11-14 19:02:03.884 +01:00 [INF] Execution attempt. Source: 'FlakyService-standard//Standard-Retry', Operation Key: 'null', Result: '200', Handled: 'false', Attempt: '0', Execution Time: 0.3231ms
+2026-11-14 19:02:03.884 +01:00 [INF] End processing HTTP request after 0.52ms - 200
+2026-11-14 19:02:03.885 +01:00 [INF] Start processing HTTP request GET http://localhost:8080/api/products?*
+2026-11-14 19:02:03.885 +01:00 [INF] Sending HTTP request GET http://localhost:8080/api/products?*
+2026-11-14 19:02:03.885 +01:00 [INF] Received HTTP response headers after 0.2601ms - 200
+2026-11-14 19:02:03.885 +01:00 [INF] Execution attempt. Source: 'FlakyService-standard//Standard-Retry', Operation Key: 'null', Result: '200', Handled: 'false', Attempt: '0', Execution Time: 0.3519ms
+2026-11-14 19:02:03.885 +01:00 [INF] End processing HTTP request after 0.4704ms - 200
+2026-11-14 19:02:03.885 +01:00 [INF] Start processing HTTP request GET http://localhost:8080/api/products?*
+2026-11-14 19:02:03.885 +01:00 [INF] Sending HTTP request GET http://localhost:8080/api/products?*
+2026-11-14 19:02:03.886 +01:00 [INF] Received HTTP response headers after 0.2679ms - 200
+2026-11-14 19:02:03.886 +01:00 [INF] Execution attempt. Source: 'FlakyService-standard//Standard-Retry', Operation Key: 'null', Result: '200', Handled: 'false', Attempt: '0', Execution Time: 0.3571ms
+2026-11-14 19:02:03.886 +01:00 [INF] End processing HTTP request after 0.4803ms - 200
+2026-11-14 19:02:03.886 +01:00 [INF] Start processing HTTP request GET http://localhost:8080/api/products?*
+2026-11-14 19:02:03.886 +01:00 [INF] Sending HTTP request GET http://localhost:8080/api/products?*
+2026-11-14 19:02:03.886 +01:00 [INF] Received HTTP response headers after 0.2128ms - 503
+2026-11-14 19:02:03.886 +01:00 [WRN] Execution attempt. Source: 'FlakyService-standard//Standard-Retry', Operation Key: 'null', Result: '503', Handled: 'true', Attempt: '0', Execution Time: 0.2999ms
+2026-11-14 19:02:03.886 +01:00 [WRN] Resilience event occurred. EventName: 'OnRetry', Source: 'FlakyService-standard//Standard-Retry', Operation Key: 'null', Result: '503'
+2026-11-14 19:02:06.045 +01:00 [INF] Sending HTTP request GET http://localhost:8080/api/products?*
+2026-11-14 19:02:06.046 +01:00 [INF] Received HTTP response headers after 0.8786ms - 200
+2026-11-14 19:02:06.046 +01:00 [INF] Execution attempt. Source: 'FlakyService-standard//Standard-Retry', Operation Key: 'null', Result: '200', Handled: 'false', Attempt: '1', Execution Time: 1.2466ms
+2026-11-14 19:02:06.046 +01:00 [INF] End processing HTTP request after 2160.0428ms - 200
+2026-11-14 19:02:06.046 +01:00 [INF] Start processing HTTP request GET http://localhost:8080/api/products?*
+2026-11-14 19:02:06.046 +01:00 [INF] Sending HTTP request GET http://localhost:8080/api/products?*
+2026-11-14 19:02:06.047 +01:00 [INF] Received HTTP response headers after 0.6884ms - 200
+2026-11-14 19:02:06.047 +01:00 [INF] Execution attempt. Source: 'FlakyService-standard//Standard-Retry', Operation Key: 'null', Result: '200', Handled: 'false', Attempt: '0', Execution Time: 0.8247ms
+2026-11-14 19:02:06.047 +01:00 [INF] End processing HTTP request after 0.9992ms - 200
+2026-11-14 19:02:06.047 +01:00 [INF] Start processing HTTP request GET http://localhost:8080/api/products?*
+2026-11-14 19:02:06.047 +01:00 [INF] Sending HTTP request GET http://localhost:8080/api/products?*
+2026-11-14 19:02:06.048 +01:00 [INF] Received HTTP response headers after 0.5396ms - 200
+2026-11-14 19:02:06.048 +01:00 [INF] Execution attempt. Source: 'FlakyService-standard//Standard-Retry', Operation Key: 'null', Result: '200', Handled: 'false', Attempt: '0', Execution Time: 0.6639ms
+2026-11-14 19:02:06.048 +01:00 [INF] End processing HTTP request after 0.7983ms - 200
+2026-11-14 19:02:06.048 +01:00 [INF] Start processing HTTP request GET http://localhost:8080/api/products?*
+2026-11-14 19:02:06.048 +01:00 [INF] Sending HTTP request GET http://localhost:8080/api/products?*
+2026-11-14 19:02:06.049 +01:00 [INF] Received HTTP response headers after 0.515ms - 503
+2026-11-14 19:02:06.049 +01:00 [WRN] Execution attempt. Source: 'FlakyService-standard//Standard-Retry', Operation Key: 'null', Result: '503', Handled: 'true', Attempt: '0', Execution Time: 0.6165ms
+2026-11-14 19:02:06.049 +01:00 [WRN] Resilience event occurred. EventName: 'OnRetry', Source: 'FlakyService-standard//Standard-Retry', Operation Key: 'null', Result: '503'
+2026-11-14 19:02:07.259 +01:00 [INF] Sending HTTP request GET http://localhost:8080/api/products?*
+2026-11-14 19:02:07.260 +01:00 [INF] Received HTTP response headers after 0.6421ms - 200
+2026-11-14 19:02:07.260 +01:00 [INF] Execution attempt. Source: 'FlakyService-standard//Standard-Retry', Operation Key: 'null', Result: '200', Handled: 'false', Attempt: '1', Execution Time: 0.8289ms
+2026-11-14 19:02:07.260 +01:00 [INF] End processing HTTP request after 1211.8497ms - 200
+2026-11-14 19:02:07.260 +01:00 [INF] Start processing HTTP request GET http://localhost:8080/api/products?*
+2026-11-14 19:02:07.260 +01:00 [INF] Sending HTTP request GET http://localhost:8080/api/products?*
+2026-11-14 19:02:07.261 +01:00 [INF] Received HTTP response headers after 0.4168ms - 200
+2026-11-14 19:02:07.261 +01:00 [INF] Execution attempt. Source: 'FlakyService-standard//Standard-Retry', Operation Key: 'null', Result: '200', Handled: 'false', Attempt: '0', Execution Time: 0.5097ms
+2026-11-14 19:02:07.261 +01:00 [INF] End processing HTTP request after 0.6239ms - 200
+2026-11-14 19:02:07.261 +01:00 [INF] Start processing HTTP request GET http://localhost:8080/api/products?*
+2026-11-14 19:02:07.261 +01:00 [INF] Sending HTTP request GET http://localhost:8080/api/products?*
+2026-11-14 19:02:07.262 +01:00 [INF] Received HTTP response headers after 0.3611ms - 502
+2026-11-14 19:02:07.262 +01:00 [WRN] Execution attempt. Source: 'FlakyService-standard//Standard-Retry', Operation Key: 'null', Result: '502', Handled: 'true', Attempt: '0', Execution Time: 0.4852ms
+2026-11-14 19:02:07.262 +01:00 [WRN] Resilience event occurred. EventName: 'OnRetry', Source: 'FlakyService-standard//Standard-Retry', Operation Key: 'null', Result: '502'
+2026-11-14 19:02:08.901 +01:00 [INF] Sending HTTP request GET http://localhost:8080/api/products?*
+2026-11-14 19:02:08.902 +01:00 [INF] Received HTTP response headers after 0.8093ms - 200
+2026-11-14 19:02:08.902 +01:00 [INF] Execution attempt. Source: 'FlakyService-standard//Standard-Retry', Operation Key: 'null', Result: '200', Handled: 'false', Attempt: '1', Execution Time: 1.033ms
+2026-11-14 19:02:08.902 +01:00 [INF] End processing HTTP request after 1641.2225ms - 200
+2026-11-14 19:02:08.903 +01:00 [INF] Start processing HTTP request GET http://localhost:8080/api/products?*
+2026-11-14 19:02:08.903 +01:00 [INF] Sending HTTP request GET http://localhost:8080/api/products?*
+2026-11-14 19:02:08.903 +01:00 [INF] Received HTTP response headers after 0.3994ms - 200
+2026-11-14 19:02:08.903 +01:00 [INF] Execution attempt. Source: 'FlakyService-standard//Standard-Retry', Operation Key: 'null', Result: '200', Handled: 'false', Attempt: '0', Execution Time: 0.4971ms
+2026-11-14 19:02:08.903 +01:00 [INF] End processing HTTP request after 0.6352ms - 200
+2026-11-14 19:02:08.903 +01:00 [INF] Start processing HTTP request GET http://localhost:8080/api/products?*
+2026-11-14 19:02:08.903 +01:00 [INF] Sending HTTP request GET http://localhost:8080/api/products?*
+2026-11-14 19:02:08.904 +01:00 [INF] Received HTTP response headers after 0.2225ms - 200
+2026-11-14 19:02:08.904 +01:00 [INF] Execution attempt. Source: 'FlakyService-standard//Standard-Retry', Operation Key: 'null', Result: '200', Handled: 'false', Attempt: '0', Execution Time: 0.2818ms
+2026-11-14 19:02:08.904 +01:00 [INF] End processing HTTP request after 0.3751ms - 200
+2026-11-14 19:02:08.904 +01:00 [INF] Start processing HTTP request GET http://localhost:8080/api/products?*
+2026-11-14 19:02:08.904 +01:00 [INF] Sending HTTP request GET http://localhost:8080/api/products?*
+2026-11-14 19:02:08.904 +01:00 [INF] Received HTTP response headers after 0.2398ms - 200
+2026-11-14 19:02:08.904 +01:00 [INF] Execution attempt. Source: 'FlakyService-standard//Standard-Retry', Operation Key: 'null', Result: '200', Handled: 'false', Attempt: '0', Execution Time: 0.2997ms
+2026-11-14 19:02:08.904 +01:00 [INF] End processing HTTP request after 0.4062ms - 200
+2026-11-14 19:02:08.904 +01:00 [INF] Start processing HTTP request GET http://localhost:8080/api/products?*
+2026-11-14 19:02:08.904 +01:00 [INF] Sending HTTP request GET http://localhost:8080/api/products?*
+2026-11-14 19:02:08.905 +01:00 [INF] Received HTTP response headers after 0.4903ms - 500
+2026-11-14 19:02:08.905 +01:00 [WRN] Execution attempt. Source: 'FlakyService-standard//Standard-Retry', Operation Key: 'null', Result: '500', Handled: 'true', Attempt: '0', Execution Time: 0.6096ms
+2026-11-14 19:02:08.905 +01:00 [WRN] Resilience event occurred. EventName: 'OnRetry', Source: 'FlakyService-standard//Standard-Retry', Operation Key: 'null', Result: '500'
+2026-11-14 19:02:10.175 +01:00 [INF] Sending HTTP request GET http://localhost:8080/api/products?*
+2026-11-14 19:02:10.176 +01:00 [INF] Received HTTP response headers after 0.7054ms - 200
+2026-11-14 19:02:10.176 +01:00 [INF] Execution attempt. Source: 'FlakyService-standard//Standard-Retry', Operation Key: 'null', Result: '200', Handled: 'false', Attempt: '1', Execution Time: 0.933ms
+2026-11-14 19:02:10.176 +01:00 [INF] End processing HTTP request after 1271.8843ms - 200
+2026-11-14 19:02:10.176 +01:00 [INF] Start processing HTTP request GET http://localhost:8080/api/products?*
+2026-11-14 19:02:10.176 +01:00 [INF] Sending HTTP request GET http://localhost:8080/api/products?*
+2026-11-14 19:02:10.177 +01:00 [INF] Received HTTP response headers after 0.3329ms - 503
+2026-11-14 19:02:10.177 +01:00 [WRN] Execution attempt. Source: 'FlakyService-standard//Standard-Retry', Operation Key: 'null', Result: '503', Handled: 'true', Attempt: '0', Execution Time: 0.4093ms
+2026-11-14 19:02:10.177 +01:00 [WRN] Resilience event occurred. EventName: 'OnRetry', Source: 'FlakyService-standard//Standard-Retry', Operation Key: 'null', Result: '503'
+2026-11-14 19:02:11.719 +01:00 [INF] Sending HTTP request GET http://localhost:8080/api/products?*
+2026-11-14 19:02:11.730 +01:00 [INF] Received HTTP response headers after 11.2763ms - 500
+2026-11-14 19:02:11.731 +01:00 [WRN] Execution attempt. Source: 'FlakyService-standard//Standard-Retry', Operation Key: 'null', Result: '500', Handled: 'true', Attempt: '1', Execution Time: 11.5287ms
+2026-11-14 19:02:11.731 +01:00 [WRN] Resilience event occurred. EventName: 'OnRetry', Source: 'FlakyService-standard//Standard-Retry', Operation Key: 'null', Result: '500'
+2026-11-14 19:02:13.957 +01:00 [INF] Sending HTTP request GET http://localhost:8080/api/products?*
+2026-11-14 19:02:13.958 +01:00 [INF] Received HTTP response headers after 1.3189ms - 200
+2026-11-14 19:02:13.958 +01:00 [INF] Execution attempt. Source: 'FlakyService-standard//Standard-Retry', Operation Key: 'null', Result: '200', Handled: 'false', Attempt: '2', Execution Time: 1.5433ms
+2026-11-14 19:02:13.959 +01:00 [INF] End processing HTTP request after 3782.1794ms - 200
+2026-11-14 19:02:13.959 +01:00 [INF] Start processing HTTP request GET http://localhost:8080/api/products?*
+2026-11-14 19:02:13.959 +01:00 [INF] Sending HTTP request GET http://localhost:8080/api/products?*
+2026-11-14 19:02:13.959 +01:00 [INF] Received HTTP response headers after 0.4963ms - 200
+2026-11-14 19:02:13.959 +01:00 [INF] Execution attempt. Source: 'FlakyService-standard//Standard-Retry', Operation Key: 'null', Result: '200', Handled: 'false', Attempt: '0', Execution Time: 0.5809ms
+2026-11-14 19:02:13.959 +01:00 [INF] End processing HTTP request after 0.6983ms - 200
+2026-11-14 19:02:13.960 +01:00 [INF] Start processing HTTP request GET http://localhost:8080/api/products?*
+2026-11-14 19:02:13.960 +01:00 [INF] Sending HTTP request GET http://localhost:8080/api/products?*
+2026-11-14 19:02:13.960 +01:00 [INF] Received HTTP response headers after 0.6134ms - 502
+2026-11-14 19:02:13.960 +01:00 [WRN] Execution attempt. Source: 'FlakyService-standard//Standard-Retry', Operation Key: 'null', Result: '502', Handled: 'true', Attempt: '0', Execution Time: 0.6921ms
+2026-11-14 19:02:13.960 +01:00 [WRN] Resilience event occurred. EventName: 'OnRetry', Source: 'FlakyService-standard//Standard-Retry', Operation Key: 'null', Result: '502'
+2026-11-14 19:02:16.277 +01:00 [INF] Sending HTTP request GET http://localhost:8080/api/products?*
+2026-11-14 19:02:16.277 +01:00 [INF] Received HTTP response headers after 0.5971ms - 200
+2026-11-14 19:02:16.277 +01:00 [INF] Execution attempt. Source: 'FlakyService-standard//Standard-Retry', Operation Key: 'null', Result: '200', Handled: 'false', Attempt: '1', Execution Time: 0.7981ms
+2026-11-14 19:02:16.277 +01:00 [INF] End processing HTTP request after 2317.8826ms - 200
+2026-11-14 19:02:16.278 +01:00 [INF] Start processing HTTP request GET http://localhost:8080/api/products?*
+2026-11-14 19:02:16.278 +01:00 [INF] Sending HTTP request GET http://localhost:8080/api/products?*
+2026-11-14 19:02:16.278 +01:00 [INF] Received HTTP response headers after 0.4277ms - 500
+2026-11-14 19:02:16.278 +01:00 [WRN] Execution attempt. Source: 'FlakyService-standard//Standard-Retry', Operation Key: 'null', Result: '500', Handled: 'true', Attempt: '0', Execution Time: 0.4874ms
+2026-11-14 19:02:16.278 +01:00 [WRN] Resilience event occurred. EventName: 'OnRetry', Source: 'FlakyService-standard//Standard-Retry', Operation Key: 'null', Result: '500'
+2026-11-14 19:02:18.114 +01:00 [INF] Sending HTTP request GET http://localhost:8080/api/products?*
+2026-11-14 19:02:18.114 +01:00 [INF] Received HTTP response headers after 0.5978ms - 200
+2026-11-14 19:02:18.114 +01:00 [INF] Execution attempt. Source: 'FlakyService-standard//Standard-Retry', Operation Key: 'null', Result: '200', Handled: 'false', Attempt: '1', Execution Time: 0.7626ms
+2026-11-14 19:02:18.114 +01:00 [INF] End processing HTTP request after 1836.6422ms - 200
+2026-11-14 19:02:18.114 +01:00 [INF] Start processing HTTP request GET http://localhost:8080/api/products?*
+2026-11-14 19:02:18.115 +01:00 [INF] Sending HTTP request GET http://localhost:8080/api/products?*
+2026-11-14 19:02:18.115 +01:00 [INF] Received HTTP response headers after 0.2888ms - 200
+2026-11-14 19:02:18.115 +01:00 [INF] Execution attempt. Source: 'FlakyService-standard//Standard-Retry', Operation Key: 'null', Result: '200', Handled: 'false', Attempt: '0', Execution Time: 0.3606ms
+2026-11-14 19:02:18.115 +01:00 [INF] End processing HTTP request after 0.4743ms - 200
+2026-11-14 19:02:18.115 +01:00 [INF] Start processing HTTP request GET http://localhost:8080/api/products?*
+2026-11-14 19:02:18.115 +01:00 [INF] Sending HTTP request GET http://localhost:8080/api/products?*
+2026-11-14 19:02:18.116 +01:00 [INF] Received HTTP response headers after 0.3435ms - 200
+2026-11-14 19:02:18.116 +01:00 [INF] Execution attempt. Source: 'FlakyService-standard//Standard-Retry', Operation Key: 'null', Result: '200', Handled: 'false', Attempt: '0', Execution Time: 0.3958ms
+2026-11-14 19:02:18.116 +01:00 [INF] End processing HTTP request after 0.5321ms - 200
+2026-11-14 19:02:18.116 +01:00 [INF] Start processing HTTP request GET http://localhost:8080/api/products?*
+2026-11-14 19:02:18.116 +01:00 [INF] Sending HTTP request GET http://localhost:8080/api/products?*
+2026-11-14 19:02:18.116 +01:00 [INF] Received HTTP response headers after 0.1772ms - 500
+2026-11-14 19:02:18.116 +01:00 [WRN] Execution attempt. Source: 'FlakyService-standard//Standard-Retry', Operation Key: 'null', Result: '500', Handled: 'true', Attempt: '0', Execution Time: 0.2227ms
+2026-11-14 19:02:18.116 +01:00 [WRN] Resilience event occurred. EventName: 'OnRetry', Source: 'FlakyService-standard//Standard-Retry', Operation Key: 'null', Result: '500'
+2026-11-14 19:02:20.267 +01:00 [INF] Sending HTTP request GET http://localhost:8080/api/products?*
+2026-11-14 19:02:20.267 +01:00 [INF] Received HTTP response headers after 0.6298ms - 200
+2026-11-14 19:02:20.268 +01:00 [INF] Execution attempt. Source: 'FlakyService-standard//Standard-Retry', Operation Key: 'null', Result: '200', Handled: 'false', Attempt: '1', Execution Time: 0.8082ms
+2026-11-14 19:02:20.268 +01:00 [INF] End processing HTTP request after 2151.7532ms - 200
+2026-11-14 19:02:20.268 +01:00 [INF] Start processing HTTP request GET http://localhost:8080/api/products?*
+2026-11-14 19:02:20.268 +01:00 [INF] Sending HTTP request GET http://localhost:8080/api/products?*
+2026-11-14 19:02:20.268 +01:00 [INF] Received HTTP response headers after 0.3321ms - 200
+2026-11-14 19:02:20.268 +01:00 [INF] Execution attempt. Source: 'FlakyService-standard//Standard-Retry', Operation Key: 'null', Result: '200', Handled: 'false', Attempt: '0', Execution Time: 0.4085ms
+2026-11-14 19:02:20.268 +01:00 [INF] End processing HTTP request after 0.5126ms - 200
+2026-11-14 19:02:20.268 +01:00 [INF] Start processing HTTP request GET http://localhost:8080/api/products?*
+2026-11-14 19:02:20.269 +01:00 [INF] Sending HTTP request GET http://localhost:8080/api/products?*
+2026-11-14 19:02:20.269 +01:00 [INF] Received HTTP response headers after 0.3562ms - 200
+2026-11-14 19:02:20.269 +01:00 [INF] Execution attempt. Source: 'FlakyService-standard//Standard-Retry', Operation Key: 'null', Result: '200', Handled: 'false', Attempt: '0', Execution Time: 0.4223ms
+2026-11-14 19:02:20.269 +01:00 [INF] End processing HTTP request after 0.5022ms - 200
+2026-11-14 19:02:20.269 +01:00 [INF] Start processing HTTP request GET http://localhost:8080/api/products?*
+2026-11-14 19:02:20.269 +01:00 [INF] Sending HTTP request GET http://localhost:8080/api/products?*
+2026-11-14 19:02:20.269 +01:00 [INF] Received HTTP response headers after 0.2371ms - 200
+2026-11-14 19:02:20.269 +01:00 [INF] Execution attempt. Source: 'FlakyService-standard//Standard-Retry', Operation Key: 'null', Result: '200', Handled: 'false', Attempt: '0', Execution Time: 0.2962ms
+2026-11-14 19:02:20.269 +01:00 [INF] End processing HTTP request after 0.361ms - 200
+2026-11-14 19:02:20.270 +01:00 [INF] Start processing HTTP request GET http://localhost:8080/api/products?*
+2026-11-14 19:02:20.270 +01:00 [INF] Sending HTTP request GET http://localhost:8080/api/products?*
+2026-11-14 19:02:20.270 +01:00 [INF] Received HTTP response headers after 0.341ms - 200
+2026-11-14 19:02:20.270 +01:00 [INF] Execution attempt. Source: 'FlakyService-standard//Standard-Retry', Operation Key: 'null', Result: '200', Handled: 'false', Attempt: '0', Execution Time: 0.4ms
+2026-11-14 19:02:20.270 +01:00 [INF] End processing HTTP request after 0.4671ms - 200
+2026-11-14 19:02:20.270 +01:00 [INF] Start processing HTTP request GET http://localhost:8080/api/products?*
+2026-11-14 19:02:20.270 +01:00 [INF] Sending HTTP request GET http://localhost:8080/api/products?*
+2026-11-14 19:02:20.270 +01:00 [INF] Received HTTP response headers after 0.1935ms - 504
+2026-11-14 19:02:20.270 +01:00 [WRN] Execution attempt. Source: 'FlakyService-standard//Standard-Retry', Operation Key: 'null', Result: '504', Handled: 'true', Attempt: '0', Execution Time: 0.24ms
+2026-11-14 19:02:20.270 +01:00 [WRN] Resilience event occurred. EventName: 'OnRetry', Source: 'FlakyService-standard//Standard-Retry', Operation Key: 'null', Result: '504'
+2026-11-14 19:02:21.734 +01:00 [INF] Sending HTTP request GET http://localhost:8080/api/products?*
+2026-11-14 19:02:21.734 +01:00 [INF] Received HTTP response headers after 0.6492ms - 200
+2026-11-14 19:02:21.734 +01:00 [INF] Execution attempt. Source: 'FlakyService-standard//Standard-Retry', Operation Key: 'null', Result: '200', Handled: 'false', Attempt: '1', Execution Time: 0.8494ms
+2026-11-14 19:02:21.734 +01:00 [INF] End processing HTTP request after 1464.4053ms - 200
+2026-11-14 19:02:21.735 +01:00 [INF] Start processing HTTP request GET http://localhost:8080/api/products?*
+2026-11-14 19:02:21.735 +01:00 [INF] Sending HTTP request GET http://localhost:8080/api/products?*
+2026-11-14 19:02:21.735 +01:00 [INF] Received HTTP response headers after 0.3531ms - 200
+2026-11-14 19:02:21.735 +01:00 [INF] Execution attempt. Source: 'FlakyService-standard//Standard-Retry', Operation Key: 'null', Result: '200', Handled: 'false', Attempt: '0', Execution Time: 0.4079ms
+2026-11-14 19:02:21.735 +01:00 [INF] End processing HTTP request after 0.5182ms - 200
+2026-11-14 19:02:21.746 +01:00 [INF] 2000 Produits récupérés depuis l'API tierce.
+2026-11-14 19:02:22.726 +01:00 [ERR] Failed executing DbCommand (22ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."CategoryId", p."CreatedAt", p."Description", p."ExternalId", p."Name", p."Price", p."Reference", p."Stock"
+FROM "Products" AS p
+WHERE p."ExternalId" IS NOT NULL
+2026-11-14 19:02:22.758 +01:00 [ERR] An exception occurred while iterating over the results of a query for context type 'FTELMarket.Data.FTELMarketDbContext'.
+Npgsql.PostgresException (0x80004005): 42703: column p.ExternalId does not exist
+
+POSITION: 64
+   at Npgsql.Internal.NpgsqlConnector.ReadMessageLong(Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder`1.StateMachineBox`1.System.Threading.Tasks.Sources.IValueTaskSource<TResult>.GetResult(Int16 token)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+  Exception data:
+    Severity: ERROR
+    SqlState: 42703
+    MessageText: column p.ExternalId does not exist
+    Position: 64
+    File: parse_relation.c
+    Line: 3716
+    Routine: errorMissingColumn
+Npgsql.PostgresException (0x80004005): 42703: column p.ExternalId does not exist
+
+POSITION: 64
+   at Npgsql.Internal.NpgsqlConnector.ReadMessageLong(Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder`1.StateMachineBox`1.System.Threading.Tasks.Sources.IValueTaskSource<TResult>.GetResult(Int16 token)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+  Exception data:
+    Severity: ERROR
+    SqlState: 42703
+    MessageText: column p.ExternalId does not exist
+    Position: 64
+    File: parse_relation.c
+    Line: 3716
+    Routine: errorMissingColumn
+2026-11-14 19:02:22.790 +01:00 [ERR] Echec de la synchronisation des produits avec l'API tierce.
+Npgsql.PostgresException (0x80004005): 42703: column p.ExternalId does not exist
+
+POSITION: 64
+   at Npgsql.Internal.NpgsqlConnector.ReadMessageLong(Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder`1.StateMachineBox`1.System.Threading.Tasks.Sources.IValueTaskSource<TResult>.GetResult(Int16 token)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToDictionaryAsync[TSource,TKey,TElement](IQueryable`1 source, Func`2 keySelector, Func`2 elementSelector, IEqualityComparer`1 comparer, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToDictionaryAsync[TSource,TKey,TElement](IQueryable`1 source, Func`2 keySelector, Func`2 elementSelector, IEqualityComparer`1 comparer, CancellationToken cancellationToken)
+   at FTELMarket.ProductSyncService.SyncAsync() in /home/loic/Documents/Fac/Dot Net/DotNet/FTELMarket/ProductSyncService.cs:line 18
+  Exception data:
+    Severity: ERROR
+    SqlState: 42703
+    MessageText: column p.ExternalId does not exist
+    Position: 64
+    File: parse_relation.c
+    Line: 3716
+    Routine: errorMissingColumn
+2026-11-14 19:11:16.784 +01:00 [WRN] Failed to determine the https port for redirect.
+2026-11-14 19:11:16.979 +01:00 [INF] Début de la synchronisation des produits.
+2026-11-14 19:11:16.986 +01:00 [INF] Start processing HTTP request GET http://localhost:8080/api/products?*
+2026-11-14 19:11:17.013 +01:00 [INF] Sending HTTP request GET http://localhost:8080/api/products?*
+2026-11-14 19:11:17.046 +01:00 [INF] Received HTTP response headers after 31.7387ms - 200
+2026-11-14 19:11:17.057 +01:00 [INF] Execution attempt. Source: 'FlakyService-standard//Standard-Retry', Operation Key: 'null', Result: '200', Handled: 'false', Attempt: '0', Execution Time: 47.1872ms
+2026-11-14 19:11:17.063 +01:00 [INF] End processing HTTP request after 79.3969ms - 200
+2026-11-14 19:11:17.091 +01:00 [INF] Start processing HTTP request GET http://localhost:8080/api/products?*
+2026-11-14 19:11:17.091 +01:00 [INF] Sending HTTP request GET http://localhost:8080/api/products?*
+2026-11-14 19:11:17.092 +01:00 [INF] Received HTTP response headers after 1.3697ms - 200
+2026-11-14 19:11:17.092 +01:00 [INF] Execution attempt. Source: 'FlakyService-standard//Standard-Retry', Operation Key: 'null', Result: '200', Handled: 'false', Attempt: '0', Execution Time: 1.6531ms
+2026-11-14 19:11:17.093 +01:00 [INF] End processing HTTP request after 2.2925ms - 200
+2026-11-14 19:11:17.093 +01:00 [INF] Start processing HTTP request GET http://localhost:8080/api/products?*
+2026-11-14 19:11:17.093 +01:00 [INF] Sending HTTP request GET http://localhost:8080/api/products?*
+2026-11-14 19:11:17.094 +01:00 [INF] Received HTTP response headers after 0.7661ms - 200
+2026-11-14 19:11:17.094 +01:00 [INF] Execution attempt. Source: 'FlakyService-standard//Standard-Retry', Operation Key: 'null', Result: '200', Handled: 'false', Attempt: '0', Execution Time: 0.9462ms
+2026-11-14 19:11:17.094 +01:00 [INF] End processing HTTP request after 1.1566ms - 200
+2026-11-14 19:11:17.095 +01:00 [INF] Start processing HTTP request GET http://localhost:8080/api/products?*
+2026-11-14 19:11:17.095 +01:00 [INF] Sending HTTP request GET http://localhost:8080/api/products?*
+2026-11-14 19:11:17.095 +01:00 [INF] Received HTTP response headers after 0.3895ms - 200
+2026-11-14 19:11:17.095 +01:00 [INF] Execution attempt. Source: 'FlakyService-standard//Standard-Retry', Operation Key: 'null', Result: '200', Handled: 'false', Attempt: '0', Execution Time: 0.5614ms
+2026-11-14 19:11:17.095 +01:00 [INF] End processing HTTP request after 0.751ms - 200
+2026-11-14 19:11:17.096 +01:00 [INF] Start processing HTTP request GET http://localhost:8080/api/products?*
+2026-11-14 19:11:17.096 +01:00 [INF] Sending HTTP request GET http://localhost:8080/api/products?*
+2026-11-14 19:11:17.096 +01:00 [INF] Received HTTP response headers after 0.2239ms - 200
+2026-11-14 19:11:17.096 +01:00 [INF] Execution attempt. Source: 'FlakyService-standard//Standard-Retry', Operation Key: 'null', Result: '200', Handled: 'false', Attempt: '0', Execution Time: 0.3688ms
+2026-11-14 19:11:17.096 +01:00 [INF] End processing HTTP request after 0.527ms - 200
+2026-11-14 19:11:17.096 +01:00 [INF] Start processing HTTP request GET http://localhost:8080/api/products?*
+2026-11-14 19:11:17.097 +01:00 [INF] Sending HTTP request GET http://localhost:8080/api/products?*
+2026-11-14 19:11:17.097 +01:00 [INF] Received HTTP response headers after 0.2362ms - 200
+2026-11-14 19:11:17.097 +01:00 [INF] Execution attempt. Source: 'FlakyService-standard//Standard-Retry', Operation Key: 'null', Result: '200', Handled: 'false', Attempt: '0', Execution Time: 0.3472ms
+2026-11-14 19:11:17.097 +01:00 [INF] End processing HTTP request after 0.4678ms - 200
+2026-11-14 19:11:17.097 +01:00 [INF] Start processing HTTP request GET http://localhost:8080/api/products?*
+2026-11-14 19:11:17.097 +01:00 [INF] Sending HTTP request GET http://localhost:8080/api/products?*
+2026-11-14 19:11:17.098 +01:00 [INF] Received HTTP response headers after 0.346ms - 503
+2026-11-14 19:11:17.099 +01:00 [WRN] Execution attempt. Source: 'FlakyService-standard//Standard-Retry', Operation Key: 'null', Result: '503', Handled: 'true', Attempt: '0', Execution Time: 1.582ms
+2026-11-14 19:11:17.105 +01:00 [WRN] Resilience event occurred. EventName: 'OnRetry', Source: 'FlakyService-standard//Standard-Retry', Operation Key: 'null', Result: '503'
+2026-11-14 19:11:18.486 +01:00 [INF] Sending HTTP request GET http://localhost:8080/api/products?*
+2026-11-14 19:11:18.487 +01:00 [INF] Received HTTP response headers after 0.7696ms - 200
+2026-11-14 19:11:18.487 +01:00 [INF] Execution attempt. Source: 'FlakyService-standard//Standard-Retry', Operation Key: 'null', Result: '200', Handled: 'false', Attempt: '1', Execution Time: 1.2713ms
+2026-11-14 19:11:18.487 +01:00 [INF] End processing HTTP request after 1389.7611ms - 200
+2026-11-14 19:11:18.488 +01:00 [INF] Start processing HTTP request GET http://localhost:8080/api/products?*
+2026-11-14 19:11:18.488 +01:00 [INF] Sending HTTP request GET http://localhost:8080/api/products?*
+2026-11-14 19:11:18.488 +01:00 [INF] Received HTTP response headers after 0.5439ms - 200
+2026-11-14 19:11:18.488 +01:00 [INF] Execution attempt. Source: 'FlakyService-standard//Standard-Retry', Operation Key: 'null', Result: '200', Handled: 'false', Attempt: '0', Execution Time: 0.7187ms
+2026-11-14 19:11:18.488 +01:00 [INF] End processing HTTP request after 0.9217ms - 200
+2026-11-14 19:11:18.489 +01:00 [INF] Start processing HTTP request GET http://localhost:8080/api/products?*
+2026-11-14 19:11:18.489 +01:00 [INF] Sending HTTP request GET http://localhost:8080/api/products?*
+2026-11-14 19:11:18.489 +01:00 [INF] Received HTTP response headers after 0.2869ms - 200
+2026-11-14 19:11:18.489 +01:00 [INF] Execution attempt. Source: 'FlakyService-standard//Standard-Retry', Operation Key: 'null', Result: '200', Handled: 'false', Attempt: '0', Execution Time: 0.4695ms
+2026-11-14 19:11:18.490 +01:00 [INF] End processing HTTP request after 0.66ms - 200
+2026-11-14 19:11:18.490 +01:00 [INF] Start processing HTTP request GET http://localhost:8080/api/products?*
+2026-11-14 19:11:18.490 +01:00 [INF] Sending HTTP request GET http://localhost:8080/api/products?*
+2026-11-14 19:11:18.490 +01:00 [INF] Received HTTP response headers after 0.3218ms - 200
+2026-11-14 19:11:18.490 +01:00 [INF] Execution attempt. Source: 'FlakyService-standard//Standard-Retry', Operation Key: 'null', Result: '200', Handled: 'false', Attempt: '0', Execution Time: 0.4506ms
+2026-11-14 19:11:18.490 +01:00 [INF] End processing HTTP request after 0.6695ms - 200
+2026-11-14 19:11:18.491 +01:00 [INF] Start processing HTTP request GET http://localhost:8080/api/products?*
+2026-11-14 19:11:18.491 +01:00 [INF] Sending HTTP request GET http://localhost:8080/api/products?*
+2026-11-14 19:11:18.491 +01:00 [INF] Received HTTP response headers after 0.2467ms - 200
+2026-11-14 19:11:18.491 +01:00 [INF] Execution attempt. Source: 'FlakyService-standard//Standard-Retry', Operation Key: 'null', Result: '200', Handled: 'false', Attempt: '0', Execution Time: 0.401ms
+2026-11-14 19:11:18.491 +01:00 [INF] End processing HTTP request after 0.5506ms - 200
+2026-11-14 19:11:18.492 +01:00 [INF] Start processing HTTP request GET http://localhost:8080/api/products?*
+2026-11-14 19:11:18.492 +01:00 [INF] Sending HTTP request GET http://localhost:8080/api/products?*
+2026-11-14 19:11:18.492 +01:00 [INF] Received HTTP response headers after 0.3945ms - 200
+2026-11-14 19:11:18.492 +01:00 [INF] Execution attempt. Source: 'FlakyService-standard//Standard-Retry', Operation Key: 'null', Result: '200', Handled: 'false', Attempt: '0', Execution Time: 0.549ms
+2026-11-14 19:11:18.492 +01:00 [INF] End processing HTTP request after 0.7379ms - 200
+2026-11-14 19:11:18.493 +01:00 [INF] Start processing HTTP request GET http://localhost:8080/api/products?*
+2026-11-14 19:11:18.493 +01:00 [INF] Sending HTTP request GET http://localhost:8080/api/products?*
+2026-11-14 19:11:18.498 +01:00 [INF] Received HTTP response headers after 5.5876ms - 200
+2026-11-14 19:11:18.498 +01:00 [INF] Execution attempt. Source: 'FlakyService-standard//Standard-Retry', Operation Key: 'null', Result: '200', Handled: 'false', Attempt: '0', Execution Time: 5.8155ms
+2026-11-14 19:11:18.499 +01:00 [INF] End processing HTTP request after 6.0876ms - 200
+2026-11-14 19:11:18.499 +01:00 [INF] Start processing HTTP request GET http://localhost:8080/api/products?*
+2026-11-14 19:11:18.499 +01:00 [INF] Sending HTTP request GET http://localhost:8080/api/products?*
+2026-11-14 19:11:18.499 +01:00 [INF] Received HTTP response headers after 0.3379ms - 504
+2026-11-14 19:11:18.499 +01:00 [WRN] Execution attempt. Source: 'FlakyService-standard//Standard-Retry', Operation Key: 'null', Result: '504', Handled: 'true', Attempt: '0', Execution Time: 0.5063ms
+2026-11-14 19:11:18.500 +01:00 [WRN] Resilience event occurred. EventName: 'OnRetry', Source: 'FlakyService-standard//Standard-Retry', Operation Key: 'null', Result: '504'
+2026-11-14 19:11:18.868 +01:00 [INF] Sending HTTP request GET http://localhost:8080/api/products?*
+2026-11-14 19:11:18.869 +01:00 [INF] Received HTTP response headers after 0.6022ms - 200
+2026-11-14 19:11:18.869 +01:00 [INF] Execution attempt. Source: 'FlakyService-standard//Standard-Retry', Operation Key: 'null', Result: '200', Handled: 'false', Attempt: '1', Execution Time: 1.0597ms
+2026-11-14 19:11:18.869 +01:00 [INF] End processing HTTP request after 370.3899ms - 200
+2026-11-14 19:11:18.870 +01:00 [INF] Start processing HTTP request GET http://localhost:8080/api/products?*
+2026-11-14 19:11:18.870 +01:00 [INF] Sending HTTP request GET http://localhost:8080/api/products?*
+2026-11-14 19:11:18.870 +01:00 [INF] Received HTTP response headers after 0.6302ms - 502
+2026-11-14 19:11:18.871 +01:00 [WRN] Execution attempt. Source: 'FlakyService-standard//Standard-Retry', Operation Key: 'null', Result: '502', Handled: 'true', Attempt: '0', Execution Time: 0.7999ms
+2026-11-14 19:11:18.871 +01:00 [WRN] Resilience event occurred. EventName: 'OnRetry', Source: 'FlakyService-standard//Standard-Retry', Operation Key: 'null', Result: '502'
+2026-11-14 19:11:20.978 +01:00 [INF] Sending HTTP request GET http://localhost:8080/api/products?*
+2026-11-14 19:11:20.980 +01:00 [INF] Received HTTP response headers after 0.6853ms - 200
+2026-11-14 19:11:20.980 +01:00 [INF] Execution attempt. Source: 'FlakyService-standard//Standard-Retry', Operation Key: 'null', Result: '200', Handled: 'false', Attempt: '1', Execution Time: 1.2806ms
+2026-11-14 19:11:20.980 +01:00 [INF] End processing HTTP request after 2110.2296ms - 200
+2026-11-14 19:11:20.980 +01:00 [INF] Start processing HTTP request GET http://localhost:8080/api/products?*
+2026-11-14 19:11:20.980 +01:00 [INF] Sending HTTP request GET http://localhost:8080/api/products?*
+2026-11-14 19:11:20.981 +01:00 [INF] Received HTTP response headers after 0.3715ms - 200
+2026-11-14 19:11:20.981 +01:00 [INF] Execution attempt. Source: 'FlakyService-standard//Standard-Retry', Operation Key: 'null', Result: '200', Handled: 'false', Attempt: '0', Execution Time: 0.5391ms
+2026-11-14 19:11:20.981 +01:00 [INF] End processing HTTP request after 0.6858ms - 200
+2026-11-14 19:11:20.981 +01:00 [INF] Start processing HTTP request GET http://localhost:8080/api/products?*
+2026-11-14 19:11:20.981 +01:00 [INF] Sending HTTP request GET http://localhost:8080/api/products?*
+2026-11-14 19:11:20.981 +01:00 [INF] Received HTTP response headers after 0.2521ms - 200
+2026-11-14 19:11:20.981 +01:00 [INF] Execution attempt. Source: 'FlakyService-standard//Standard-Retry', Operation Key: 'null', Result: '200', Handled: 'false', Attempt: '0', Execution Time: 0.3592ms
+2026-11-14 19:11:20.981 +01:00 [INF] End processing HTTP request after 0.4783ms - 200
+2026-11-14 19:11:20.981 +01:00 [INF] Start processing HTTP request GET http://localhost:8080/api/products?*
+2026-11-14 19:11:20.982 +01:00 [INF] Sending HTTP request GET http://localhost:8080/api/products?*
+2026-11-14 19:11:20.982 +01:00 [INF] Received HTTP response headers after 0.3049ms - 502
+2026-11-14 19:11:20.982 +01:00 [WRN] Execution attempt. Source: 'FlakyService-standard//Standard-Retry', Operation Key: 'null', Result: '502', Handled: 'true', Attempt: '0', Execution Time: 0.4173ms
+2026-11-14 19:11:20.982 +01:00 [WRN] Resilience event occurred. EventName: 'OnRetry', Source: 'FlakyService-standard//Standard-Retry', Operation Key: 'null', Result: '502'
+2026-11-14 19:11:23.473 +01:00 [INF] Sending HTTP request GET http://localhost:8080/api/products?*
+2026-11-14 19:11:23.474 +01:00 [INF] Received HTTP response headers after 0.8479ms - 200
+2026-11-14 19:11:23.475 +01:00 [INF] Execution attempt. Source: 'FlakyService-standard//Standard-Retry', Operation Key: 'null', Result: '200', Handled: 'false', Attempt: '1', Execution Time: 1.1677ms
+2026-11-14 19:11:23.475 +01:00 [INF] End processing HTTP request after 2493.1928ms - 200
+2026-11-14 19:11:23.475 +01:00 [INF] Start processing HTTP request GET http://localhost:8080/api/products?*
+2026-11-14 19:11:23.475 +01:00 [INF] Sending HTTP request GET http://localhost:8080/api/products?*
+2026-11-14 19:11:23.476 +01:00 [INF] Received HTTP response headers after 0.4983ms - 200
+2026-11-14 19:11:23.476 +01:00 [INF] Execution attempt. Source: 'FlakyService-standard//Standard-Retry', Operation Key: 'null', Result: '200', Handled: 'false', Attempt: '0', Execution Time: 0.6053ms
+2026-11-14 19:11:23.476 +01:00 [INF] End processing HTTP request after 0.7923ms - 200
+2026-11-14 19:11:23.476 +01:00 [INF] Start processing HTTP request GET http://localhost:8080/api/products?*
+2026-11-14 19:11:23.476 +01:00 [INF] Sending HTTP request GET http://localhost:8080/api/products?*
+2026-11-14 19:11:23.476 +01:00 [INF] Received HTTP response headers after 0.26ms - 502
+2026-11-14 19:11:23.476 +01:00 [WRN] Execution attempt. Source: 'FlakyService-standard//Standard-Retry', Operation Key: 'null', Result: '502', Handled: 'true', Attempt: '0', Execution Time: 0.4243ms
+2026-11-14 19:11:23.476 +01:00 [WRN] Resilience event occurred. EventName: 'OnRetry', Source: 'FlakyService-standard//Standard-Retry', Operation Key: 'null', Result: '502'
+2026-11-14 19:11:24.559 +01:00 [INF] Sending HTTP request GET http://localhost:8080/api/products?*
+2026-11-14 19:11:24.560 +01:00 [INF] Received HTTP response headers after 0.8171ms - 200
+2026-11-14 19:11:24.560 +01:00 [INF] Execution attempt. Source: 'FlakyService-standard//Standard-Retry', Operation Key: 'null', Result: '200', Handled: 'false', Attempt: '1', Execution Time: 1.204ms
+2026-11-14 19:11:24.560 +01:00 [INF] End processing HTTP request after 1084.0806ms - 200
+2026-11-14 19:11:24.560 +01:00 [INF] Start processing HTTP request GET http://localhost:8080/api/products?*
+2026-11-14 19:11:24.560 +01:00 [INF] Sending HTTP request GET http://localhost:8080/api/products?*
+2026-11-14 19:11:24.561 +01:00 [INF] Received HTTP response headers after 0.3221ms - 504
+2026-11-14 19:11:24.561 +01:00 [WRN] Execution attempt. Source: 'FlakyService-standard//Standard-Retry', Operation Key: 'null', Result: '504', Handled: 'true', Attempt: '0', Execution Time: 0.379ms
+2026-11-14 19:11:24.561 +01:00 [WRN] Resilience event occurred. EventName: 'OnRetry', Source: 'FlakyService-standard//Standard-Retry', Operation Key: 'null', Result: '504'
+2026-11-14 19:11:26.766 +01:00 [INF] Sending HTTP request GET http://localhost:8080/api/products?*
+2026-11-14 19:11:26.767 +01:00 [INF] Received HTTP response headers after 0.6223ms - 503
+2026-11-14 19:11:26.767 +01:00 [WRN] Execution attempt. Source: 'FlakyService-standard//Standard-Retry', Operation Key: 'null', Result: '503', Handled: 'true', Attempt: '1', Execution Time: 0.9252ms
+2026-11-14 19:11:26.767 +01:00 [WRN] Resilience event occurred. EventName: 'OnRetry', Source: 'FlakyService-standard//Standard-Retry', Operation Key: 'null', Result: '503'
+2026-11-14 19:11:27.591 +01:00 [INF] Sending HTTP request GET http://localhost:8080/api/products?*
+2026-11-14 19:11:27.592 +01:00 [INF] Received HTTP response headers after 0.7195ms - 200
+2026-11-14 19:11:27.592 +01:00 [INF] Execution attempt. Source: 'FlakyService-standard//Standard-Retry', Operation Key: 'null', Result: '200', Handled: 'false', Attempt: '2', Execution Time: 0.9469ms
+2026-11-14 19:11:27.592 +01:00 [INF] End processing HTTP request after 3032.0404ms - 200
+2026-11-14 19:11:27.592 +01:00 [INF] Start processing HTTP request GET http://localhost:8080/api/products?*
+2026-11-14 19:11:27.592 +01:00 [INF] Sending HTTP request GET http://localhost:8080/api/products?*
+2026-11-14 19:11:27.593 +01:00 [INF] Received HTTP response headers after 0.3937ms - 200
+2026-11-14 19:11:27.593 +01:00 [INF] Execution attempt. Source: 'FlakyService-standard//Standard-Retry', Operation Key: 'null', Result: '200', Handled: 'false', Attempt: '0', Execution Time: 0.4744ms
+2026-11-14 19:11:27.593 +01:00 [INF] End processing HTTP request after 0.5982ms - 200
+2026-11-14 19:11:27.593 +01:00 [INF] Start processing HTTP request GET http://localhost:8080/api/products?*
+2026-11-14 19:11:27.593 +01:00 [INF] Sending HTTP request GET http://localhost:8080/api/products?*
+2026-11-14 19:11:27.593 +01:00 [INF] Received HTTP response headers after 0.2583ms - 500
+2026-11-14 19:11:27.594 +01:00 [WRN] Execution attempt. Source: 'FlakyService-standard//Standard-Retry', Operation Key: 'null', Result: '500', Handled: 'true', Attempt: '0', Execution Time: 0.3463ms
+2026-11-14 19:11:27.594 +01:00 [WRN] Resilience event occurred. EventName: 'OnRetry', Source: 'FlakyService-standard//Standard-Retry', Operation Key: 'null', Result: '500'
+2026-11-14 19:11:30.081 +01:00 [INF] Sending HTTP request GET http://localhost:8080/api/products?*
+2026-11-14 19:11:30.082 +01:00 [INF] Received HTTP response headers after 0.9427ms - 504
+2026-11-14 19:11:30.082 +01:00 [WRN] Execution attempt. Source: 'FlakyService-standard//Standard-Retry', Operation Key: 'null', Result: '504', Handled: 'true', Attempt: '1', Execution Time: 1.1674ms
+2026-11-14 19:11:30.082 +01:00 [WRN] Resilience event occurred. EventName: 'OnRetry', Source: 'FlakyService-standard//Standard-Retry', Operation Key: 'null', Result: '504'
+2026-11-14 19:11:30.611 +01:00 [INF] Sending HTTP request GET http://localhost:8080/api/products?*
+2026-11-14 19:11:30.612 +01:00 [INF] Received HTTP response headers after 0.8756ms - 200
+2026-11-14 19:11:30.612 +01:00 [INF] Execution attempt. Source: 'FlakyService-standard//Standard-Retry', Operation Key: 'null', Result: '200', Handled: 'false', Attempt: '2', Execution Time: 1.1632ms
+2026-11-14 19:11:30.612 +01:00 [INF] End processing HTTP request after 3018.6975ms - 200
+2026-11-14 19:11:30.612 +01:00 [INF] Start processing HTTP request GET http://localhost:8080/api/products?*
+2026-11-14 19:11:30.612 +01:00 [INF] Sending HTTP request GET http://localhost:8080/api/products?*
+2026-11-14 19:11:30.613 +01:00 [INF] Received HTTP response headers after 0.5238ms - 200
+2026-11-14 19:11:30.613 +01:00 [INF] Execution attempt. Source: 'FlakyService-standard//Standard-Retry', Operation Key: 'null', Result: '200', Handled: 'false', Attempt: '0', Execution Time: 0.6189ms
+2026-11-14 19:11:30.613 +01:00 [INF] End processing HTTP request after 0.7851ms - 200
+2026-11-14 19:11:30.613 +01:00 [INF] Start processing HTTP request GET http://localhost:8080/api/products?*
+2026-11-14 19:11:30.613 +01:00 [INF] Sending HTTP request GET http://localhost:8080/api/products?*
+2026-11-14 19:11:30.613 +01:00 [INF] Received HTTP response headers after 0.2306ms - 200
+2026-11-14 19:11:30.613 +01:00 [INF] Execution attempt. Source: 'FlakyService-standard//Standard-Retry', Operation Key: 'null', Result: '200', Handled: 'false', Attempt: '0', Execution Time: 0.2986ms
+2026-11-14 19:11:30.613 +01:00 [INF] End processing HTTP request after 0.3823ms - 200
+2026-11-14 19:11:30.614 +01:00 [INF] Start processing HTTP request GET http://localhost:8080/api/products?*
+2026-11-14 19:11:30.614 +01:00 [INF] Sending HTTP request GET http://localhost:8080/api/products?*
+2026-11-14 19:11:30.614 +01:00 [INF] Received HTTP response headers after 0.2247ms - 502
+2026-11-14 19:11:30.614 +01:00 [WRN] Execution attempt. Source: 'FlakyService-standard//Standard-Retry', Operation Key: 'null', Result: '502', Handled: 'true', Attempt: '0', Execution Time: 0.3106ms
+2026-11-14 19:11:30.614 +01:00 [WRN] Resilience event occurred. EventName: 'OnRetry', Source: 'FlakyService-standard//Standard-Retry', Operation Key: 'null', Result: '502'
+2026-11-14 19:11:33.288 +01:00 [INF] Sending HTTP request GET http://localhost:8080/api/products?*
+2026-11-14 19:11:33.289 +01:00 [INF] Received HTTP response headers after 1.2899ms - 200
+2026-11-14 19:11:33.289 +01:00 [INF] Execution attempt. Source: 'FlakyService-standard//Standard-Retry', Operation Key: 'null', Result: '200', Handled: 'false', Attempt: '1', Execution Time: 1.5557ms
+2026-11-14 19:11:33.289 +01:00 [INF] End processing HTTP request after 2675.538ms - 200
+2026-11-14 19:11:33.289 +01:00 [INF] Start processing HTTP request GET http://localhost:8080/api/products?*
+2026-11-14 19:11:33.289 +01:00 [INF] Sending HTTP request GET http://localhost:8080/api/products?*
+2026-11-14 19:11:33.290 +01:00 [INF] Received HTTP response headers after 0.5495ms - 200
+2026-11-14 19:11:33.290 +01:00 [INF] Execution attempt. Source: 'FlakyService-standard//Standard-Retry', Operation Key: 'null', Result: '200', Handled: 'false', Attempt: '0', Execution Time: 0.6688ms
+2026-11-14 19:11:33.290 +01:00 [INF] End processing HTTP request after 0.8045ms - 200
+2026-11-14 19:11:33.290 +01:00 [INF] Start processing HTTP request GET http://localhost:8080/api/products?*
+2026-11-14 19:11:33.290 +01:00 [INF] Sending HTTP request GET http://localhost:8080/api/products?*
+2026-11-14 19:11:33.291 +01:00 [INF] Received HTTP response headers after 0.293ms - 200
+2026-11-14 19:11:33.291 +01:00 [INF] Execution attempt. Source: 'FlakyService-standard//Standard-Retry', Operation Key: 'null', Result: '200', Handled: 'false', Attempt: '0', Execution Time: 0.3594ms
+2026-11-14 19:11:33.291 +01:00 [INF] End processing HTTP request after 0.4525ms - 200
+2026-11-14 19:11:33.291 +01:00 [INF] Start processing HTTP request GET http://localhost:8080/api/products?*
+2026-11-14 19:11:33.291 +01:00 [INF] Sending HTTP request GET http://localhost:8080/api/products?*
+2026-11-14 19:11:33.291 +01:00 [INF] Received HTTP response headers after 0.2542ms - 502
+2026-11-14 19:11:33.291 +01:00 [WRN] Execution attempt. Source: 'FlakyService-standard//Standard-Retry', Operation Key: 'null', Result: '502', Handled: 'true', Attempt: '0', Execution Time: 0.3289ms
+2026-11-14 19:11:33.291 +01:00 [WRN] Resilience event occurred. EventName: 'OnRetry', Source: 'FlakyService-standard//Standard-Retry', Operation Key: 'null', Result: '502'
+2026-11-14 19:11:34.932 +01:00 [INF] Sending HTTP request GET http://localhost:8080/api/products?*
+2026-11-14 19:11:34.932 +01:00 [INF] Received HTTP response headers after 0.7058ms - 500
+2026-11-14 19:11:34.932 +01:00 [WRN] Execution attempt. Source: 'FlakyService-standard//Standard-Retry', Operation Key: 'null', Result: '500', Handled: 'true', Attempt: '1', Execution Time: 0.9048ms
+2026-11-14 19:11:34.933 +01:00 [WRN] Resilience event occurred. EventName: 'OnRetry', Source: 'FlakyService-standard//Standard-Retry', Operation Key: 'null', Result: '500'
+2026-11-14 19:11:36.195 +01:00 [INF] Sending HTTP request GET http://localhost:8080/api/products?*
+2026-11-14 19:11:36.195 +01:00 [INF] Received HTTP response headers after 0.54ms - 200
+2026-11-14 19:11:36.195 +01:00 [INF] Execution attempt. Source: 'FlakyService-standard//Standard-Retry', Operation Key: 'null', Result: '200', Handled: 'false', Attempt: '2', Execution Time: 0.7059ms
+2026-11-14 19:11:36.196 +01:00 [INF] End processing HTTP request after 2904.732ms - 200
+2026-11-14 19:11:36.196 +01:00 [INF] Start processing HTTP request GET http://localhost:8080/api/products?*
+2026-11-14 19:11:36.196 +01:00 [INF] Sending HTTP request GET http://localhost:8080/api/products?*
+2026-11-14 19:11:36.196 +01:00 [INF] Received HTTP response headers after 0.2665ms - 502
+2026-11-14 19:11:36.196 +01:00 [WRN] Execution attempt. Source: 'FlakyService-standard//Standard-Retry', Operation Key: 'null', Result: '502', Handled: 'true', Attempt: '0', Execution Time: 0.3553ms
+2026-11-14 19:11:36.196 +01:00 [WRN] Resilience event occurred. EventName: 'OnRetry', Source: 'FlakyService-standard//Standard-Retry', Operation Key: 'null', Result: '502'
+2026-11-14 19:11:37.579 +01:00 [INF] Sending HTTP request GET http://localhost:8080/api/products?*
+2026-11-14 19:11:37.579 +01:00 [INF] Received HTTP response headers after 0.6279ms - 200
+2026-11-14 19:11:37.579 +01:00 [INF] Execution attempt. Source: 'FlakyService-standard//Standard-Retry', Operation Key: 'null', Result: '200', Handled: 'false', Attempt: '1', Execution Time: 0.8376ms
+2026-11-14 19:11:37.579 +01:00 [INF] End processing HTTP request after 1383.6022ms - 200
+2026-11-14 19:11:37.580 +01:00 [INF] Start processing HTTP request GET http://localhost:8080/api/products?*
+2026-11-14 19:11:37.580 +01:00 [INF] Sending HTTP request GET http://localhost:8080/api/products?*
+2026-11-14 19:11:37.580 +01:00 [INF] Received HTTP response headers after 0.4032ms - 500
+2026-11-14 19:11:37.580 +01:00 [WRN] Execution attempt. Source: 'FlakyService-standard//Standard-Retry', Operation Key: 'null', Result: '500', Handled: 'true', Attempt: '0', Execution Time: 0.4844ms
+2026-11-14 19:11:37.580 +01:00 [WRN] Resilience event occurred. EventName: 'OnRetry', Source: 'FlakyService-standard//Standard-Retry', Operation Key: 'null', Result: '500'
+2026-11-14 19:11:40.253 +01:00 [INF] Sending HTTP request GET http://localhost:8080/api/products?*
+2026-11-14 19:11:40.254 +01:00 [INF] Received HTTP response headers after 1.0414ms - 504
+2026-11-14 19:11:40.254 +01:00 [WRN] Execution attempt. Source: 'FlakyService-standard//Standard-Retry', Operation Key: 'null', Result: '504', Handled: 'true', Attempt: '1', Execution Time: 1.3047ms
+2026-11-14 19:11:40.254 +01:00 [WRN] Resilience event occurred. EventName: 'OnRetry', Source: 'FlakyService-standard//Standard-Retry', Operation Key: 'null', Result: '504'
+2026-11-14 19:11:42.848 +01:00 [INF] Sending HTTP request GET http://localhost:8080/api/products?*
+2026-11-14 19:11:42.849 +01:00 [INF] Received HTTP response headers after 0.6294ms - 200
+2026-11-14 19:11:42.849 +01:00 [INF] Execution attempt. Source: 'FlakyService-standard//Standard-Retry', Operation Key: 'null', Result: '200', Handled: 'false', Attempt: '2', Execution Time: 0.8342ms
+2026-11-14 19:11:42.849 +01:00 [INF] End processing HTTP request after 5269.7224ms - 200
+2026-11-14 19:11:42.849 +01:00 [INF] Start processing HTTP request GET http://localhost:8080/api/products?*
+2026-11-14 19:11:42.850 +01:00 [INF] Sending HTTP request GET http://localhost:8080/api/products?*
+2026-11-14 19:11:42.850 +01:00 [INF] Received HTTP response headers after 0.3896ms - 200
+2026-11-14 19:11:42.850 +01:00 [INF] Execution attempt. Source: 'FlakyService-standard//Standard-Retry', Operation Key: 'null', Result: '200', Handled: 'false', Attempt: '0', Execution Time: 0.4703ms
+2026-11-14 19:11:42.850 +01:00 [INF] End processing HTTP request after 0.5722ms - 200
+2026-11-14 19:11:42.850 +01:00 [INF] Start processing HTTP request GET http://localhost:8080/api/products?*
+2026-11-14 19:11:42.850 +01:00 [INF] Sending HTTP request GET http://localhost:8080/api/products?*
+2026-11-14 19:11:42.850 +01:00 [INF] Received HTTP response headers after 0.1916ms - 200
+2026-11-14 19:11:42.851 +01:00 [INF] Execution attempt. Source: 'FlakyService-standard//Standard-Retry', Operation Key: 'null', Result: '200', Handled: 'false', Attempt: '0', Execution Time: 0.2447ms
+2026-11-14 19:11:42.851 +01:00 [INF] End processing HTTP request after 0.3263ms - 200
+2026-11-14 19:11:42.851 +01:00 [INF] Start processing HTTP request GET http://localhost:8080/api/products?*
+2026-11-14 19:11:42.851 +01:00 [INF] Sending HTTP request GET http://localhost:8080/api/products?*
+2026-11-14 19:11:42.851 +01:00 [INF] Received HTTP response headers after 0.3243ms - 200
+2026-11-14 19:11:42.851 +01:00 [INF] Execution attempt. Source: 'FlakyService-standard//Standard-Retry', Operation Key: 'null', Result: '200', Handled: 'false', Attempt: '0', Execution Time: 0.3769ms
+2026-11-14 19:11:42.851 +01:00 [INF] End processing HTTP request after 0.4523ms - 200
+2026-11-14 19:11:42.851 +01:00 [INF] Start processing HTTP request GET http://localhost:8080/api/products?*
+2026-11-14 19:11:42.851 +01:00 [INF] Sending HTTP request GET http://localhost:8080/api/products?*
+2026-11-14 19:11:42.851 +01:00 [INF] Received HTTP response headers after 0.1765ms - 503
+2026-11-14 19:11:42.852 +01:00 [WRN] Execution attempt. Source: 'FlakyService-standard//Standard-Retry', Operation Key: 'null', Result: '503', Handled: 'true', Attempt: '0', Execution Time: 0.2339ms
+2026-11-14 19:11:42.852 +01:00 [WRN] Resilience event occurred. EventName: 'OnRetry', Source: 'FlakyService-standard//Standard-Retry', Operation Key: 'null', Result: '503'
+2026-11-14 19:11:43.454 +01:00 [INF] Sending HTTP request GET http://localhost:8080/api/products?*
+2026-11-14 19:11:43.454 +01:00 [INF] Received HTTP response headers after 0.5523ms - 200
+2026-11-14 19:11:43.455 +01:00 [INF] Execution attempt. Source: 'FlakyService-standard//Standard-Retry', Operation Key: 'null', Result: '200', Handled: 'false', Attempt: '1', Execution Time: 0.7104ms
+2026-11-14 19:11:43.455 +01:00 [INF] End processing HTTP request after 603.349ms - 200
+2026-11-14 19:11:43.455 +01:00 [INF] Start processing HTTP request GET http://localhost:8080/api/products?*
+2026-11-14 19:11:43.455 +01:00 [INF] Sending HTTP request GET http://localhost:8080/api/products?*
+2026-11-14 19:11:43.455 +01:00 [INF] Received HTTP response headers after 0.3079ms - 200
+2026-11-14 19:11:43.455 +01:00 [INF] Execution attempt. Source: 'FlakyService-standard//Standard-Retry', Operation Key: 'null', Result: '200', Handled: 'false', Attempt: '0', Execution Time: 0.3646ms
+2026-11-14 19:11:43.455 +01:00 [INF] End processing HTTP request after 0.5296ms - 200
+2026-11-14 19:11:43.456 +01:00 [INF] Start processing HTTP request GET http://localhost:8080/api/products?*
+2026-11-14 19:11:43.456 +01:00 [INF] Sending HTTP request GET http://localhost:8080/api/products?*
+2026-11-14 19:11:43.456 +01:00 [INF] Received HTTP response headers after 0.2335ms - 200
+2026-11-14 19:11:43.456 +01:00 [INF] Execution attempt. Source: 'FlakyService-standard//Standard-Retry', Operation Key: 'null', Result: '200', Handled: 'false', Attempt: '0', Execution Time: 0.4033ms
+2026-11-14 19:11:43.456 +01:00 [INF] End processing HTTP request after 0.5048ms - 200
+2026-11-14 19:11:43.456 +01:00 [INF] Start processing HTTP request GET http://localhost:8080/api/products?*
+2026-11-14 19:11:43.456 +01:00 [INF] Sending HTTP request GET http://localhost:8080/api/products?*
+2026-11-14 19:11:43.457 +01:00 [INF] Received HTTP response headers after 0.3367ms - 200
+2026-11-14 19:11:43.457 +01:00 [INF] Execution attempt. Source: 'FlakyService-standard//Standard-Retry', Operation Key: 'null', Result: '200', Handled: 'false', Attempt: '0', Execution Time: 0.3938ms
+2026-11-14 19:11:43.457 +01:00 [INF] End processing HTTP request after 0.4716ms - 200
+2026-11-14 19:11:43.457 +01:00 [INF] Start processing HTTP request GET http://localhost:8080/api/products?*
+2026-11-14 19:11:43.457 +01:00 [INF] Sending HTTP request GET http://localhost:8080/api/products?*
+2026-11-14 19:11:43.457 +01:00 [INF] Received HTTP response headers after 0.2256ms - 502
+2026-11-14 19:11:43.457 +01:00 [WRN] Execution attempt. Source: 'FlakyService-standard//Standard-Retry', Operation Key: 'null', Result: '502', Handled: 'true', Attempt: '0', Execution Time: 0.2838ms
+2026-11-14 19:11:43.457 +01:00 [WRN] Resilience event occurred. EventName: 'OnRetry', Source: 'FlakyService-standard//Standard-Retry', Operation Key: 'null', Result: '502'
+2026-11-14 19:11:45.448 +01:00 [INF] Sending HTTP request GET http://localhost:8080/api/products?*
+2026-11-14 19:11:45.449 +01:00 [INF] Received HTTP response headers after 0.6395ms - 200
+2026-11-14 19:11:45.449 +01:00 [INF] Execution attempt. Source: 'FlakyService-standard//Standard-Retry', Operation Key: 'null', Result: '200', Handled: 'false', Attempt: '1', Execution Time: 0.8528ms
+2026-11-14 19:11:45.449 +01:00 [INF] End processing HTTP request after 1992.5537ms - 200
+2026-11-14 19:11:45.449 +01:00 [INF] Start processing HTTP request GET http://localhost:8080/api/products?*
+2026-11-14 19:11:45.450 +01:00 [INF] Sending HTTP request GET http://localhost:8080/api/products?*
+2026-11-14 19:11:45.450 +01:00 [INF] Received HTTP response headers after 0.5663ms - 200
+2026-11-14 19:11:45.450 +01:00 [INF] Execution attempt. Source: 'FlakyService-standard//Standard-Retry', Operation Key: 'null', Result: '200', Handled: 'false', Attempt: '0', Execution Time: 0.6678ms
+2026-11-14 19:11:45.450 +01:00 [INF] End processing HTTP request after 0.8058ms - 200
+2026-11-14 19:11:45.451 +01:00 [INF] 2000 Produits récupérés depuis l'API tierce.
+2026-11-14 19:11:47.114 +01:00 [INF] Synchronisation terminée : 2000 créé(s), 0 mis à jour et 0 supprimé(s).
